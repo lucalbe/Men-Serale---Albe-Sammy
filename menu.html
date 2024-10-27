@@ -1,97 +1,39 @@
 <!DOCTYPE html>
 <html lang="it">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Quiz FEM Avanzato</title>
-  <style>
-    body {
-      font-family: Arial, sans-serif;
-      background-color: #f4f4f4;
-      color: #333;
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      height: 100vh;
-      margin: 0;
-      flex-direction: column;
-    }
-    .quiz-container {
-      width: 90%;
-      max-width: 500px;
-      background-color: #fff;
-      padding: 20px;
-      border-radius: 8px;
-      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
-    }
-    h1 {
-      text-align: center;
-      color: #00539C;
-    }
-    .question {
-      margin: 15px 0;
-    }
-    button {
-      width: 100%;
-      padding: 10px;
-      background-color: #00539C;
-      color: #fff;
-      border: none;
-      border-radius: 5px;
-      font-size: 16px;
-      cursor: pointer;
-    }
-    button:hover {
-      background-color: #004080;
-    }
-  </style>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Menù Serale</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f9f9f9;
+            color: #333;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            margin: 0;
+            flex-direction: column;
+        }
+        .menu-container {
+            text-align: center;
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        h1 {
+            color: #00539C;
+        }
+    </style>
 </head>
 <body>
-  <div class="quiz-container">
-    <h1>Quiz FEM Avanzato</h1>
-    <div class="question" id="question1">
-      <p>1. Qual è il principale vantaggio del metodo degli elementi finiti (FEM) nella simulazione strutturale complessa?</p>
-      <label><input type="radio" name="q1" value="20"> Permette di approssimare problemi complessi in sottostrutture più semplici</label><br>
-      <label><input type="radio" name="q1" value="0"> Rende i calcoli manuali più veloci</label><br>
-      <label><input type="radio" name="q1" value="0"> Riduce i costi del materiale</label>
+    <div class="menu-container">
+        <h1>Menù Serale</h1>
+        <p><strong>Antipasto:</strong> Chips di Voghera</p>
+        <p><strong>Primo:</strong> Niente</p>
+        <p><strong>Secondo:</strong> Polipo e patate</p>
     </div>
-    <div class="question" id="question2">
-      <p>2. Cosa rappresenta il parametro "mesh refinement" in una simulazione FEM?</p>
-      <label><input type="radio" name="q2" value="20"> Miglioramento della precisione attraverso una suddivisione più fine</label><br>
-      <label><input type="radio" name="q2" value="0"> Riduzione delle risorse computazionali</label><br>
-      <label><input type="radio" name="q2" value="0"> Eliminazione delle variabili indipendenti</label>
-    </div>
-    <div class="question" id="question3">
-      <p>3. Quale tipo di problema viene risolto con FEM utilizzando l’analisi modale?</p>
-      <label><input type="radio" name="q3" value="20"> Vibrazioni e frequenze naturali</label><br>
-      <label><input type="radio" name="q3" value="0"> Efficienza termica</label><br>
-      <label><input type="radio" name="q3" value="0"> Rigidità torsionale</label>
-    </div>
-    <div class="question" id="question4">
-      <p>4. Per quale motivo è cruciale considerare la "non-linearità" in alcune analisi FEM?</p>
-      <label><input type="radio" name="q4" value="20"> Perché i materiali possono comportarsi diversamente sotto stress elevato</label><br>
-      <label><input type="radio" name="q4" value="0"> Perché rende i calcoli più semplici</label><br>
-      <label><input type="radio" name="q4" value="0"> Perché semplifica la geometria dei modelli</label>
-    </div>
-    <div class="question" id="question5">
-      <p>5. Qual è lo scopo principale dell'uso dei "vincoli" in una simulazione FEM?</p>
-      <label><input type="radio" name="q5" value="20"> Fissare i gradi di libertà in punti specifici del modello</label><br>
-      <label><input type="radio" name="q5" value="0"> Aumentare la flessibilità del modello</label><br>
-      <label><input type="radio" name="q5" value="0"> Rappresentare carichi dinamici</label>
-    </div>
-    <button onclick="calculateScore()">Calcola punteggio</button>
-    <p id="score" style="text-align:center; margin-top:20px; font-size:18px;"></p>
-  </div>
-
-  <script>
-    function calculateScore() {
-      let score = 0;
-      for (let i = 1; i <= 5; i++) {
-        const answer = document.querySelector(`input[name="q${i}"]:checked`);
-        if (answer) score += parseInt(answer.value);
-      }
-      document.getElementById("score").innerText = `Il tuo punteggio è: ${score} su 100`;
-    }
-  </script>
 </body>
 </html>
